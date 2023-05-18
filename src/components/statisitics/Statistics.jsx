@@ -19,15 +19,15 @@ const Statistics = ({ title, stats }) => {
           </ul>
         </>
       ) : (
-        <ul className="stat-list">
-          {stats.map((statsEl) => (
-            <li className="item" key={statsEl.id}>
-              <StatisticsElement
-                label={statsEl.label}
-                percentage={statsEl.percentage}
-              />
-            </li>
-          ))}
+          <ul className="stat-list">
+            {stats.map((statsEl) => (
+              <li className="item" key={statsEl.id}>
+                <StatisticsElement
+                  label={statsEl.label}
+                  percentage={statsEl.percentage}
+                />
+              </li>
+            ))}
         </ul>
       )}
     </section>
