@@ -4,13 +4,13 @@ import StatisticsElement from './StatisticsElement';
 const Statistics = ({ title, stats }) => {
   return (
     <section className="statistics">
-      {!(title === "") ? (
+      {(title && stats) ? (
         <>
           <h2 className="title">{title}</h2>
           <ul className="stat-list">
-            {stats.map(statsEl => (
+            {stats.map((statsEl) => (
               <li className="item" key={statsEl.id}>
-                <StatisticsElement 
+                <StatisticsElement
                   label={statsEl.label}
                   percentage={statsEl.percentage}
                 />
@@ -20,9 +20,9 @@ const Statistics = ({ title, stats }) => {
         </>
       ) : (
         <ul className="stat-list">
-          {stats.map(statsEl => (
+          {stats.map((statsEl) => (
             <li className="item" key={statsEl.id}>
-              <StatisticsElement 
+              <StatisticsElement
                 label={statsEl.label}
                 percentage={statsEl.percentage}
               />
