@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import StatisticsElement from './StatisticsElement';
+// import { } from './Statistics.styled';
 
 const Statistics = ({ title, stats }) => {
   return (
