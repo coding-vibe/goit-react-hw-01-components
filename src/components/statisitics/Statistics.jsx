@@ -6,8 +6,8 @@ const Statistics = ({ title, stats }) => {
   return (
     <Section className="statistics">
       <Container className="container">
-        {title ? (
-          <Title className="title">{title}</Title>) : null}
+        {title && (
+          <Title className="title">{title}</Title>)}
           <List className="stat-list">
             {stats.map((statsEl) => (
               <El className="item" key={statsEl.id}>
