@@ -6,9 +6,8 @@ const Statistics = ({ title, stats }) => {
   return (
     <Section className="statistics">
       <Container className="container">
-      {(title && stats) ? (
-        <>
-          <Title className="title">{title}</Title>
+        {title ? (
+          <Title className="title">{title}</Title>) : null}
           <List className="stat-list">
             {stats.map((statsEl) => (
               <El className="item" key={statsEl.id}>
@@ -19,19 +18,6 @@ const Statistics = ({ title, stats }) => {
               </El>
             ))}
           </List>
-        </>
-      ) : (
-          <List className="stat-list">
-            {stats.map((statsEl) => (
-              <El className="item" key={statsEl.id}>
-                <StatisticsElement
-                  label={statsEl.label}
-                  percentage={statsEl.percentage}
-                />
-              </El>
-            ))}
-        </List>
-        )}
         </Container>
     </Section>
   );
